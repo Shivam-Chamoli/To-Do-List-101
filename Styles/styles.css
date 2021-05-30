@@ -1,0 +1,118 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  min-height: 100vh;
+  font-family: Poppins, sans-serif;
+  background-image: linear-gradient(120deg,#ffffc4,#e0ae09);
+  background-repeat: no-repeat;
+}
+.heading{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Akaya, sans-serif;
+  color: black;
+}
+.heading h1{
+  height: 15vh;
+  font-size: 4rem;
+  margin-top: 30px;
+}
+.heading h3{
+  height: 15vh;
+  margin-top: 5px;
+}
+.to-do-input, form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5vh;
+}
+form input, form button{
+  border: none;
+  padding: 7px;
+  background-color: white;
+
+}
+.list-container{
+  min-width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.list-item{
+  list-style: none;
+  min-width: 30%;
+}
+.todo{
+  display: flex;
+  padding: 2px;
+  background-color: white;
+  margin:.3rem;
+  transition: all .3s ease;
+
+}
+.todo li{
+  flex:1;
+  font-size: 1rem;
+}
+.todo .completed-btn, .todo .delete-btn{
+  padding: .3rem;
+  margin: 2px;
+  background-color: #e0ae09;
+  border: none;
+  font-size: 1rem;
+  color: white;
+}
+.todo .completed-btn{
+  background-color: green;
+}
+.fas{
+  pointer-events: none;
+}
+/* animation for completed to do item */
+.completed{
+  text-decoration: line-through;
+  opacity: .5;
+}
+/* animation to delete to do item */
+.fall{
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+/* Filter section css */
+select{
+  /* removing browser styling */
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  border:none;
+  appearance:none;
+  outline:none;
+}
+
+.filter-section{
+  margin: 1rem;
+  position:relative;
+  overflow: hidden;
+}
+select{
+  /* applying fresh styling */
+  color: #e0ae09;
+  width: 10rem;
+  background-color: white;
+  cursor:pointer;
+  padding: 7px;
+}
+.filter-section::after{
+  content: "\25BC";
+  position: absolute;
+  background: #e0ae09;
+  color: white;
+  top:0;
+  right:0;
+  padding: .2rem;
+  pointer-events: none;
+}
