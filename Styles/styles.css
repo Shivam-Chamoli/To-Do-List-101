@@ -17,19 +17,20 @@ body{
   color: black;
 }
 .heading h1{
-  height: 15vh;
-  font-size: 4rem;
+  font-size: 5rem;
   margin-top: 30px;
+  margin-bottom: 20px;
 }
 .heading h3{
-  height: 15vh;
+  font-size: 1.5rem;
   margin-top: 5px;
+  margin-bottom: 5em;
 }
 .to-do-input, form{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 5vh;
+  margin-bottom: 2em;
 }
 form input, form button{
   border: none;
